@@ -1,13 +1,27 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (let i=0; i < array.length; i++) {
+    for (let a= i + 1; a < array.length; a++) {
+      if (array[i] + array[a] == target) {
+        return true;
+      }
+    };
+  };
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
   Add your pseudocode here
+  function (array, target)
+    loop through array for first number of equation
+      loop through array for second numer of equation
+        if target minus first number is equal to second number, return true
+    if it gets through each combination of numbers and doesn't return true, return false
 */
 
 /*
